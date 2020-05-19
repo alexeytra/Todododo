@@ -10,7 +10,7 @@ import UIKit
 //import CoreData
 import RealmSwift
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: SwipeTableViewController{
     
     var categories: Results<Category>?
 //    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -22,8 +22,10 @@ class CategoryViewController: UITableViewController {
         super.viewDidLoad()
         loadCategories()
         
-        
+        tableView.rowHeight = 80.0
     }
+    
+    
 
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -56,8 +58,8 @@ class CategoryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        
+
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = categories?[indexPath.row].name ?? "no categories added yet"
         return cell
     }
@@ -91,16 +93,26 @@ class CategoryViewController: UITableViewController {
     }
     
     func loadCategories() {
-//        let request: NSFetchRequest<Category> = Category.fetchRequest()
-//
-//        do {
-//            categories = try context.fetch(request)
-//        } catch {
-//            print("Error loading categories \(error)")
-//        }
-        
+
         categories = realm.objects(Category.self)
         
         tableView.reloadData()
     }
+    
+    //MARK: - Delete data from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let categoryForDelation = self.categories?[indexPath.row] {
+            do {
+                try self.realm.write{
+                    self.realm.delete(categoryForDelation)
+                }
+            } catch {
+                print("Error deleting categories, \(error)")
+            }
+            
+            tableView.reloadData()
+        }
+    }
+    
 }

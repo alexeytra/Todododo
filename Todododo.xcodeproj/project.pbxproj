@@ -16,6 +16,7 @@
 		8A6136B2246BADFE009B2D76 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6136B1246BADFE009B2D76 /* Item.swift */; };
 		8A6136B4246BAE13009B2D76 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6136B3246BAE13009B2D76 /* Category.swift */; };
 		8ACC5E872469129A0082633C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC5E862469129A0082633C /* CategoryViewController.swift */; };
+		8AE4B5952472484C00D23550 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE4B5942472484C00D23550 /* SwipeTableViewController.swift */; };
 		B7E9F989DEB1097E49FCD608 /* Pods_Todododo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0521F1CD1956E5C86E8690C8 /* Pods_Todododo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		8A6136B1246BADFE009B2D76 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8A6136B3246BAE13009B2D76 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8ACC5E862469129A0082633C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		8AE4B5942472484C00D23550 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		9D71DD280246424554665010 /* Pods-Todododo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todododo.debug.xcconfig"; path = "Target Support Files/Pods-Todododo/Pods-Todododo.debug.xcconfig"; sourceTree = "<group>"; };
 		F7576AE968AD3E4CF16DF3C3 /* Pods-Todododo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todododo.release.xcconfig"; path = "Target Support Files/Pods-Todododo/Pods-Todododo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				8A155200245BC1DC0079027D /* TodoListViewController.swift */,
+				8AE4B5942472484C00D23550 /* SwipeTableViewController.swift */,
 				8ACC5E862469129A0082633C /* CategoryViewController.swift */,
 			);
 			path = Controllers;
@@ -250,6 +253,7 @@
 				8ACC5E872469129A0082633C /* CategoryViewController.swift in Sources */,
 				8A155201245BC1DC0079027D /* TodoListViewController.swift in Sources */,
 				8A1551FD245BC1DC0079027D /* AppDelegate.swift in Sources */,
+				8AE4B5952472484C00D23550 /* SwipeTableViewController.swift in Sources */,
 				8A6136B2246BADFE009B2D76 /* Item.swift in Sources */,
 				8A1551FF245BC1DC0079027D /* SceneDelegate.swift in Sources */,
 				8A6136B4246BAE13009B2D76 /* Category.swift in Sources */,
